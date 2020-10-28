@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color: #c9dbdb;">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+          function showTable(flatId){
+            var currentFlat;
+            if (flatId == 1){
+                currentFlat = flat1;
+            }
+            if (flatId == 2){
+                currentFlat = flat2;
+            }
+            if (flatId == 3){
+                currentFlat = flat3;
+            }
+            if (flatId == 4){
+                currentFlat = flat4;
+            }
+            if (flatId == 5){
+                currentFlat = flat5;
+            }
+            if (flatId == 6){
+                currentFlat = flat6;
+            }
+            if (flatId == 7){
+                currentFlat = flat7;
+            }
+            if (flatId == 8){
+                currentFlat = flat8;
+            } 
+            document.getElementById("detailedInfo").innerHTML = "Flat " + flatId + " has " + currentFlat.numberofOccupants + " occupant." + "<br>" 
+            + "Emergency Contact is " + currentFlat.emergencyContact + ", and Emergency Contact's number is " + currentFlat.emergencyContactNumber + "<br>"
+            + "Current debt is " + currentFlat.debt + "$";    
+            }  
+        </script>
+        <script>
+            
+
+            var flat1 = {
+                numberofOccupants : 4,
+                emergencyContact : "John Doe",
+                emergencyContactNumber : 5075413453,
+                debt : 50
+            };
+            var flat2 = {
+                numberofOccupants : 5,
+                emergencyContact : "John Doe",
+                emergencyContactNumber : 5075413453
+                ,debt : 50
+            };
+            var flat3 = {
+                numberofOccupants : 2,
+                emergencyContact : "John Doe",
+                emergencyContactNumber : 5075413453
+                ,debt : 50
+            };
+            var flat4 = {
+                numberofOccupants : 2,
+                emergencyContact : "John Doe",
+                emergencyContactNumber : 5075413453
+                ,debt : 50
+            };
+            var flat5 = {
+                numberofOccupants : 3,
+                emergencyContact : "John Doe",
+                emergencyContactNumber : 5075413453
+                ,debt : 50
+            };
+            var flat6 = {
+                numberofOccupants : 1,
+                emergencyContact : "John Doe",
+                emergencyContactNumber : 5075413453
+                ,debt : 50
+            };
+            var flat7 = {
+                numberofOccupants : 5,
+                emergencyContact : "John Doe",
+                emergencyContactNumber : 5075413453
+                ,debt : 50
+            };
+            
+            var flat8 = {
+                numberofOccupants : 4,
+                emergencyContact : "John Doe",
+                emergencyContactNumber : 5075413453
+                ,debt : 50
+            };
+        </script>
+    </head>
+    <style>
+        .btn {
+            border: none;
+            background-color: inherit;
+            padding: 14px 28px;
+            font-size: 16px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .flat {
+            color: dodgerblue;
+        }
+
+        .flat:hover {
+            background: #2196F3;
+            color: white;
+        }
+
+        section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .announcement{
+            margin-left: 5%;
+            margin-right: 5%;
+            width: 1300px ;
+            height: auto;
+            background-color: inherit;
+            border: 3px solid rgb(99, 99, 99);
+            padding: 10px;
+        }
+
+        .center {
+          margin: auto;  
+          text-align: center;
+          width:100%;
+          border: 3px solid rgb(99, 99, 99);
+        }
+
+        .flats{
+          margin-left: 200px;
+          text-align: center;
+          width: 150px;
+          height: auto; 
+          border: 3px solid rgb(99, 99, 99);
+        }
+
+        .info{
+          margin-right: 10%;
+          text-align: center;
+          width: 65%;
+          height: 370px;
+          border: 3px solid rgb(99, 99, 99);
+        }
+        </style>
+    <h1 class="center" style=" font-size: xx-large; background-image: url(https://www.emlakdanismanlari.com/wp-content/uploads/2017/12/apartman-yonetim-2.jpg); height: 50px;">
+         Akatsuki Apartment Management Systems 
+    </h1>
+
+    <section>
+        <div style="float: left;"><p class="announcement">
+            - Test Announcement 1 <br>
+            - Test Announcement 2 <br>
+            - Test Announcement 3 <br>
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div style="float: left;" class="flats">
+            <button onClick="showTable(1)" class="btn flat">Flat 1</button><br>
+            <button onclick="showTable(2)" class="btn flat">Flat 2</button><br>
+            <button onclick="showTable(3)" class="btn flat">Flat 3</button><br>
+            <button onclick="showTable(4)" class="btn flat">Flat 4</button><br>
+            <button onclick="showTable(5)" class="btn flat">Flat 5</button><br>
+            <button onclick="showTable(6)" class="btn flat">Flat 6</button><br>
+            <button onclick="showTable(7)" class="btn flat">Flat 7</button><br>
+            <button onclick="showTable(8)" class="btn flat">Flat 8</button><br>
+        </div> 
+            <p id="detailedInfo" style="float: right;" class="info" > DENEME </p>
+
+    </section>
+</body>
+</html>
